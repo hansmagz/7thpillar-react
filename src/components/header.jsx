@@ -86,14 +86,18 @@ const Header = (props) => {
     const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <Box sx={{ marginBottom: '70px' }}>
+        <Box
+        // sx={{ marginBottom: '70px'}}
+        sx={{ marginBottom: '8vh'}}
+        >
             <ElevationScroll {...props}>
                 <AppBar>
                     <Toolbar className='toolBar'>
                         <Link href="#" underline="none">
-                            <Typography variant="h5" className='logo'>
+                            {/* <Typography variant="h5" className='logo'>
                                 Logo
-                            </Typography>
+                            </Typography> */}
+                            <img src='src/assets/logo2.png' className='logo'></img>
                         </Link>
 
                         {matches ? (
@@ -119,7 +123,7 @@ const Header = (props) => {
                         ) : <Box
                             sx={{
                                 display: 'flex',
-                                justifyContent: 'space-between',
+                                justifyContent: 'space-around',
                                 flexGrow: '0.1',
                             }}
                         >

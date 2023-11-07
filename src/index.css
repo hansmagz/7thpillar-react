@@ -12,12 +12,14 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto Condensed';
+  /* color: white; */
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #212121;
 }
 
 code {
@@ -25,13 +27,13 @@ code {
     monospace;
 }
 
-html,
+/* html,
 body {
   height: 100%;
   margin: 0;
   line-height: 1.5;
   color: #121212;
-}
+} */
 
 #root {
   display: flex;

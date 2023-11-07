@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Box, Container } from '@mui/material';
+import { Grid, Typography, Button, Box, Container } from '@mui/material';
 // import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined';
 // import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 // import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
@@ -48,39 +48,29 @@ const Section = () => {
   ];
   return (
     <>
-      <Container maxWidth="xl">
-        <Grid container style={{ marginTop: '4em', marginBottom: '4em' }}>
-          <Grid container item justifyContent="center">
-            <Typography variant="h3" fontWeight={700} className='title'>
-              Offered Services
-            </Typography>
-          </Grid>
-          <Grid container item>
-            <Box sx={{ flexGrow: 1, minHeight: '400px' }}>
-              <Grid container className='sectionGridContainer'>
-                {sectionItems.map((item) => (
-                  <Grid
-                    container
-                    item
-                    xs={12}
-                    md={3.5}
-                    minHeight={300}
-                    key={item.id}
-                    alignItems="center"
-                    justifyContent="center"
-                    className='sectionGridItem'
-                  >
-                    <Grid item>
-                      {item.icon}
-                      <Typography variant="h4" fontWeight={'bold'}>{item.sentence}</Typography>
-                    </Grid>
-                  </Grid>
-                ))}
-              </Grid>
-            </Box>
-          </Grid>
+      <Grid container
+        // style={{ marginTop: '4em', marginBottom: '4em' }}
+        bgcolor={'#323332'}
+        px={'10em'}
+        // spacing={4}
+        py={'10em'}
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Grid item md={9}>
+          <Typography variant="h2" fontWeight={700} color={'white'}>Ready to Get Started?</Typography>
+          <Typography variant="h6" color={'#E3C263'}>We’re on your side, doing what it takes to get the job done right from the first consultation to your daily operations.<br/>Contact us for a free quote.</Typography>
         </Grid>
-      </Container>
+        <Grid item md={3} textAlign={'center'}>
+          <Button
+            variant="outlined"
+            color="primary"
+            sx={{ width: '300px', fontSize: '24px' }}
+          >
+            Let's Talk
+          </Button>
+        </Grid>
+      </Grid>
     </>
   );
 };

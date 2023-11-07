@@ -36,6 +36,14 @@ const theme = createTheme({
       'Roboto Condensed',
     ].join(','),
   },
+  palette: {
+    primary: {
+      main: '#E3C263',
+    },
+    // secondary: {
+    //   main: green[500],
+    // },
+  },
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(

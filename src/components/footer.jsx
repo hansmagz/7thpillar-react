@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className='footerContainer'>
       <Typography className='footerText'>
-        7th Pillar © 2023
+        Copyright © 2023 7th Pillar. All rights reserved
         {/* <Link href="#" target="_blank" underline="none">
           AppSeed
         </Link> */}
