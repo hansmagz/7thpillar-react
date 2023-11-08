@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import {
     AppBar,
     Typography,
@@ -10,47 +11,41 @@ import {
     IconButton,
     Drawer,
 } from '@mui/material';
-import React from 'react';
 import { Link as RouterLink } from "react-router-dom";
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import PropTypes from 'prop-types';
+// import useScrollTrigger from '@mui/material/useScrollTrigger';
+// import PropTypes from 'prop-types';
 import MenuIcon from '@mui/icons-material/Menu';
+import Logo from '../assets/logo2.png';
 import '../styles/styles.css'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-function ElevationScroll(props) {
-    const { children } = props;
-    // Note that you normally won't need to set the window ref as useScrollTrigger
-    // will default to window.
-    // This is only being set here because the demo is in an iframe.
-    const trigger = useScrollTrigger({
-        disableHysteresis: true,
-        threshold: 0,
-        //   target: window ? window() : undefined,
-    });
-
-    return React.cloneElement(children, {
-        elevation: trigger ? 4 : 0,
-    });
-}
-
-ElevationScroll.propTypes = {
-    children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    // window: PropTypes.func,
-};
-
 const Header = (props) => {
+    const [scrolled, setScrolling] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // console.log(window.scrollY / 500);
+            if (window.scrollY > 0) {
+                setScrolling(window.scrollY / 500);
+            } else {
+                setScrolling(0);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     const links = [
         { id: 1, route: 'Home', url: '/' },
         { id: 2, route: 'About', url: 'about' },
     ];
 
-    const [state, setState] = React.useState({
+    const [state, setState] = useState({
         right: false,
     });
 
@@ -74,7 +69,7 @@ const Header = (props) => {
         >
             <List>
                 {links.map((link) => (
-                    <ListItem button key={link.id}>
+                    <ListItem button key={link.id} component={RouterLink} to={link.url}>
                         <ListItemText primary={link.route} />
                     </ListItem>
                 ))}
@@ -86,60 +81,61 @@ const Header = (props) => {
     const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <Box
-        // sx={{ marginBottom: '70px'}}
-        sx={{ marginBottom: '8vh'}}
-        >
-            <ElevationScroll {...props}>
-                <AppBar>
-                    <Toolbar className='toolBar'>
-                        <Link href="#" underline="none">
-                            {/* <Typography variant="h5" className='logo'>
+        <Box>
+            <AppBar
+            elevation={scrolled > 0.5 ? 4 : 0}
+            sx={{
+                backgroundColor: `rgba(33, 33, 33, ${scrolled})`,
+            }}
+            >
+                <Toolbar className='toolBar'>
+                    <Link href="#" underline="none">
+                        {/* <Typography variant="h5" className='logo'>
                                 Logo
                             </Typography> */}
-                            <img src='src/assets/logo2.png' className='logo'></img>
-                        </Link>
+                        <img src={Logo} className='logo'></img>
+                    </Link>
 
-                        {matches ? (
-                            <Box>
-                                <IconButton
-                                    size="large"
-                                    edge="end"
-                                    color="inherit"
-                                    aria-label="menu"
-                                    onClick={toggleDrawer('right', true)}
-                                >
-                                    <MenuIcon className='menuIcon' fontSize="" />
-                                </IconButton>
+                    {matches ? (
+                        <Box>
+                            <IconButton
+                                size="large"
+                                edge="end"
+                                color="inherit"
+                                aria-label="menu"
+                                onClick={toggleDrawer('right', true)}
+                            >
+                                <MenuIcon className='menuIcon' fontSize="" style={{ fill: '#E3C263' }} />
+                            </IconButton>
 
-                                <Drawer
-                                    anchor="right"
-                                    open={state['right']}
-                                    onClose={toggleDrawer('right', false)}
-                                >
-                                    {list('right')}
-                                </Drawer>
-                            </Box>
-                        ) : <Box
-                            sx={{
-                                display: 'flex',
-                                justifyContent: 'space-around',
-                                flexGrow: '0.1',
-                            }}
-                        >
-                            {links.map((link) => (
-                                //   <Link href={link.url} underline="none" key={link.id}>
-                                //     <Typography className='link'>{link.route}</Typography>
-                                //   </Link>
-                                <Link component={RouterLink} to={link.url} underline="none" key={link.id}>
-                                    <Typography className='link'>{link.route}</Typography>
-                                </Link>
-                            ))}
-                        </Box>}
+                            <Drawer
+                                anchor="right"
+                                open={state['right']}
+                                onClose={toggleDrawer('right', false)}
+                            >
+                                {list('right')}
+                            </Drawer>
+                        </Box>
+                    ) : <Box
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'space-around',
+                            flexGrow: '0.1',
+                            // height: '100%',
+                            // alignSelf: 'center'
+                        }}
+                    >
+                        {links.map((link) => (
+                            <Link
+                            // sx={{ "&:hover": { backgroundColor: "#E3C263" } }}
+                            component={RouterLink} to={link.url} underline="none" key={link.id} className='header-item'>
+                                <Typography className='link'>{link.route}</Typography>
+                            </Link>
+                        ))}
+                    </Box>}
 
-                    </Toolbar>
-                </AppBar>
-            </ElevationScroll>
+                </Toolbar>
+            </AppBar>
         </Box>
     );
 };

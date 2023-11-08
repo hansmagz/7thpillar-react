@@ -13,10 +13,8 @@ function root() {
         //     <Footer></Footer>
         // </>
         <Grid container>
-            <Grid container item>
-                <Header></Header>
-            </Grid>
-            <Grid container item justifyContent="center" style={{marginTop:'1em'}}>
+            <Header></Header>
+            <Grid container item justifyContent="center">
                 {/* <Grid item xs={11} sm={10}>
                     <Outlet />
                 </Grid> */}

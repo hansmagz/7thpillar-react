@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Stack, Typography, Button, Box } from '@mui/material';
-import myteam from '../assets/BG1.png';
 import '../styles/styles.css'
 
 const Hero = () => {
@@ -8,12 +7,10 @@ const Hero = () => {
     <Box className='heroBox'>
       <Stack alignItems="center" paddingX={4}>
         <Typography variant="h2" fontWeight={700} className='title'>
-          Let's scale your business
+          Scale up your Business with us
         </Typography>
         <Typography variant="h6" className='subtitle'>
-          Hire professionals who will help your business make 10X your
-          previous income.<br/>With over 5years experience in Marketing & Business
-          strategy, we are your best client.
+          We help businesses from start to finish. With over 5 years experience in Hardware & Software Solutions.
         </Typography>
         <Button
           variant="outlined"
