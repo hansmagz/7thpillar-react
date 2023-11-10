@@ -8,6 +8,7 @@ import Apple from '../assets/Apple3.png';
 import Kotlin from '../assets/Kotlin.png';
 import Swift from '../assets/Swift.png';
 import Zoom from '../assets/Zoom.png';
+import Mastercard from '../assets/Mastercard.png';
 import Marquee from "react-fast-marquee";
 
 const Section = () => {
@@ -35,6 +36,7 @@ const Section = () => {
           <img src={Kotlin} height={'200px'} style={{marginRight:'4em'}}></img>
           <img src={Swift} height={'200px'} style={{marginRight:'4em'}}></img>
           <img src={Zoom} height={'200px'} style={{marginRight:'4em'}}></img>
+          <img src={Mastercard} height={'200px'} style={{marginRight:'4em'}}></img>
         </Marquee>
         {/* <Grid container item justifyContent="space-between" spacing={{xs:4, md:0}}>
           <Grid item xs={6} md={1.5}>

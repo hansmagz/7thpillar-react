@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Typography, Grid, Divider, Container } from '@mui/material';
+import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from '../assets/logo4.png';
 import '../styles/styles.css'
 
 const Footer = () => {
-  const date = new Date().getFullYear();
+  // const date = new Date().getFullYear();
 
   return (
     <Box sx={{ flexGrow: 1 }} className='footerContainer'>

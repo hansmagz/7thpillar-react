@@ -40,7 +40,7 @@ const Section = () => {
     {
       id: 5,
       icon: <CloudIcon sx={{ fontSize: 100, color: '#E3C263', transition: 'color 0.3s ease' }} className='sectionGridLogo' />,
-      sentence: 'Cloud Operations',
+      sentence: 'IAS',
     },
     {
       id: 6,
