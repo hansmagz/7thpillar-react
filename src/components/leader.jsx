@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Typography, Button } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import Leader1 from '../assets/Leader1.jpg';
 import Leader2 from '../assets/Leader2.jpg';
+import Reveal from '../components/reveal';
 import '../styles/styles.css'
 
 const Section = () => {
@@ -22,18 +23,24 @@ const Section = () => {
         </Grid>
 
         <Grid container item spacing={6} justifyContent={'center'}>
-          <Grid item xs={12} md={3} textAlign={'center'}>
-            <img src={Leader1} width={'100%'}></img>
-            <Typography variant="h5" color={'#E3C263'}>Juan Dela Cruz</Typography>
-            <Typography variant="h6" color={'#E3C263'}>Chairman, 7th Pillar</Typography>
+          <Grid item xs={12} md={3} textAlign={'center'} order={{ xs: 2, md: 1 }}>
+            <Reveal>
+              <img src={Leader1} width={'100%'}></img>
+              <Typography variant="h5" color={'#E3C263'}>Juan Dela Cruz</Typography>
+              <Typography variant="h6" color={'#E3C263'}>Chairman, 7th Pillar</Typography>
+            </Reveal>
           </Grid>
-          <Grid item xs={12} md={5}>
-            <Typography variant="h6" color={'#E3C263'}>Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti felis lorem et nulla convallis dui faucibus pretium tincidunt. Fames lacinia lacus fusce accumsan cursus. In ornare quam leo vehicula varius. Aliquet vivamus curae montes interdum nunc. At finibus sollicitudin nam elit rutrum. Volutpat ut diam mi gravida eu cursus. Finibus curabitur a faucibus ante leo urna accumsan parturient. Euismod iaculis vestibulum senectus porttitor dapibus aenean nulla aliquet.</Typography>
+          <Grid item xs={12} md={5} order={{ xs: 1, md: 2 }}>
+            <Reveal>
+              <Typography variant="h6" color={'#E3C263'}>Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti felis lorem et nulla convallis dui faucibus pretium tincidunt. Fames lacinia lacus fusce accumsan cursus. In ornare quam leo vehicula varius. Aliquet vivamus curae montes interdum nunc. At finibus sollicitudin nam elit rutrum. Volutpat ut diam mi gravida eu cursus. Finibus curabitur a faucibus ante leo urna accumsan parturient. Euismod iaculis vestibulum senectus porttitor dapibus aenean nulla aliquet.</Typography>
+            </Reveal>
           </Grid>
-          <Grid item xs={12} md={3} textAlign={'center'}>
-            <img src={Leader2} width={'100%'}></img>
-            <Typography variant="h5" color={'#E3C263'}>Juan Dela Cruz</Typography>
-            <Typography variant="h6" color={'#E3C263'}>President & COO, 7th Pillar</Typography>
+          <Grid item xs={12} md={3} textAlign={'center'} order={{ xs: 3, md: 3 }}>
+            <Reveal>
+              <img src={Leader2} width={'100%'}></img>
+              <Typography variant="h5" color={'#E3C263'}>Juan Dela Cruz</Typography>
+              <Typography variant="h6" color={'#E3C263'}>President & COO, 7th Pillar</Typography>
+            </Reveal>
           </Grid>
         </Grid>
       </Grid>

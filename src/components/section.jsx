@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Box, Container } from '@mui/material';
+import { Grid, Typography, Box, Container, Fade } from '@mui/material';
 // import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined';
 // import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 // import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
@@ -9,7 +9,8 @@ import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import CloudIcon from '@mui/icons-material/Cloud';
 import CloudDoneIcon from '@mui/icons-material/CloudDone';
-import BG from '../assets/BG3.png';
+import Reveal from '../components/reveal';
+import BG from '../assets/BG7.png';
 import '../styles/styles.css'
 
 const Section = () => {
@@ -49,7 +50,10 @@ const Section = () => {
   ];
   return (
     <>
-      <Container maxWidth="xl" className='services'>
+      <Container maxWidth="xl"
+        // className='services'
+        sx={{ backgroundImage: { xs: '', md: `url(${BG})` }, backgroundSize: 'cover', backgroundPosition: 'right', backgroundRepeat: 'no-repeat' }}
+      >
         <Grid container style={{ marginTop: '4em', marginBottom: '4em' }}>
           <Grid container item justifyContent="center">
             <Typography variant="h3" fontWeight={700} className='title'>
@@ -63,18 +67,26 @@ const Section = () => {
                   <Grid
                     container
                     item
+                    key={item.id}
                     xs={12}
                     md={3.5}
-                    minHeight={300}
-                    key={item.id}
-                    alignItems="center"
-                    justifyContent="center"
-                    className='sectionGridItem'
+                    margin={1.5}
                   >
-                    <Grid item>
-                      {item.icon}
-                      <Typography variant="h4" fontWeight={'bold'}>{item.sentence}</Typography>
-                    </Grid>
+                    <Reveal width='100%'>
+                      <Grid
+                        container
+                        item
+                        minHeight={300}
+                        alignItems="center"
+                        justifyContent="center"
+                        className='sectionGridItem'
+                      >
+                        <Grid item>
+                          {item.icon}
+                          <Typography variant="h4" fontWeight={'bold'}>{item.sentence}</Typography>
+                        </Grid>
+                      </Grid>
+                    </Reveal>
                   </Grid>
                 ))}
               </Grid>

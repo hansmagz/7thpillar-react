@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 import '../styles/styles.css'
 import AWS from '../assets/AWS.png';
 import ReactImg from '../assets/React.png';
@@ -8,6 +8,7 @@ import Apple from '../assets/Apple3.png';
 import Kotlin from '../assets/Kotlin.png';
 import Swift from '../assets/Swift.png';
 import Zoom from '../assets/Zoom.png';
+import Marquee from "react-fast-marquee";
 
 const Section = () => {
   return (
@@ -15,18 +16,27 @@ const Section = () => {
       <Grid container
         // style={{ marginTop: '4em', marginBottom: '4em' }}
         bgcolor={'#E3C263'}
-        px={{ xs: '2em', md: '10em' }}
+        // px={{ xs: '2em', md: '10em' }}
         // spacing={{ xs: 4 }}
         py={'5em'}
-        // justifyContent="space-between"
-        
+      // justifyContent="space-between"
+
       >
         <Grid container item justifyContent="center">
           <Typography variant="h3" fontWeight={700} pb={4}>
             Our Partners
           </Typography>
         </Grid>
-        <Grid container item justifyContent="space-between" spacing={{xs:4, sm:0}}>
+        <Marquee autoFill={'true'} pauseOnClick={'true'}>
+          <img src={AWS} height={'200px'} style={{marginRight:'4em'}}></img>
+          <img src={ReactImg} height={'200px'} style={{marginRight:'4em'}}></img>
+          <img src={Samsung} height={'200px'} style={{marginRight:'4em'}}></img>
+          <img src={Apple} height={'200px'} style={{marginRight:'4em'}}></img>
+          <img src={Kotlin} height={'200px'} style={{marginRight:'4em'}}></img>
+          <img src={Swift} height={'200px'} style={{marginRight:'4em'}}></img>
+          <img src={Zoom} height={'200px'} style={{marginRight:'4em'}}></img>
+        </Marquee>
+        {/* <Grid container item justifyContent="space-between" spacing={{xs:4, md:0}}>
           <Grid item xs={6} md={1.5}>
             <img src={AWS} width={'100%'}></img>
           </Grid>
@@ -48,7 +58,7 @@ const Section = () => {
           <Grid item xs={6} md={1.5}>
             <img src={Zoom} width={'100%'}></img>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );

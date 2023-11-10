@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
     AppBar,
-    Typography,
     Link,
     Box,
     Toolbar,
@@ -10,7 +9,9 @@ import {
     ListItemText,
     IconButton,
     Drawer,
+    Button
 } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from "react-router-dom";
 // import useScrollTrigger from '@mui/material/useScrollTrigger';
 // import PropTypes from 'prop-types';
@@ -21,13 +22,22 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Header = (props) => {
+    const ColorButton = styled(Button)(({ theme }) => ({
+        // color: theme.palette.getContrastText(purple[500]),
+        // backgroundColor: purple[500],
+        '&:hover': {
+            backgroundColor: '#E3C263',
+            color: '#212121'
+        },
+    }));
+
     const [scrolled, setScrolling] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            // console.log(window.scrollY / 500);
             if (window.scrollY > 0) {
                 setScrolling(window.scrollY / 500);
+                // console.log(window.scrollY / 500);
             } else {
                 setScrolling(0);
             }
@@ -83,17 +93,19 @@ const Header = (props) => {
     return (
         <Box>
             <AppBar
-            elevation={scrolled > 0.5 ? 4 : 0}
-            sx={{
-                backgroundColor: `rgba(33, 33, 33, ${scrolled})`,
-            }}
+                elevation={scrolled > 0.5 ? 4 : 0}
+                sx={{
+                    backgroundColor: `rgba(33, 33, 33, ${scrolled / 2 > 0.5 ? 0.5 : scrolled / 2})`,
+                    WebkitBackdropFilter: `blur(${scrolled * 10 > 10 ? 10 : scrolled * 10}px)`,
+                    backdropFilter: `blur(${scrolled * 10 > 10 ? 10 : scrolled * 10}px)`,
+                }}
             >
                 <Toolbar className='toolBar'>
                     <Link href="#" underline="none">
                         {/* <Typography variant="h5" className='logo'>
                                 Logo
                             </Typography> */}
-                        <img src={Logo} className='logo'></img>
+                        <img src={Logo} className='logo' style={{ opacity: scrolled }}></img>
                     </Link>
 
                     {matches ? (
@@ -121,16 +133,19 @@ const Header = (props) => {
                             display: 'flex',
                             justifyContent: 'space-around',
                             flexGrow: '0.1',
-                            // height: '100%',
+                            height: '100%',
                             // alignSelf: 'center'
                         }}
                     >
                         {links.map((link) => (
-                            <Link
-                            // sx={{ "&:hover": { backgroundColor: "#E3C263" } }}
-                            component={RouterLink} to={link.url} underline="none" key={link.id} className='header-item'>
-                                <Typography className='link'>{link.route}</Typography>
-                            </Link>
+                            // <Link
+                            // // sx={{ "&:hover": { backgroundColor: "#E3C263" } }}
+                            // component={RouterLink} to={link.url} underline="none" key={link.id} className='header-item'>
+                            //     <Typography className='link'>{link.route}</Typography>
+                            // </Link>
+                            <ColorButton variant="text" key={link.id} component={RouterLink} to={link.url} className='header-button'>
+                                {link.route}
+                            </ColorButton>
                         ))}
                     </Box>}
 
