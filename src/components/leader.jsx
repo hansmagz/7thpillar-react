@@ -26,7 +26,7 @@ const Section = () => {
           <Grid item xs={12} md={3} textAlign={'center'} order={{ xs: 2, md: 1 }}>
             <Reveal>
               <img src={Leader1} width={'100%'}></img>
-              <Typography variant="h5" color={'#E3C263'}>Juan Dela Cruz</Typography>
+              <Typography variant="h5" color={'#E3C263'}>Rayner C. Lorenzo</Typography>
               <Typography variant="h6" color={'#E3C263'}>Chairman, 7th Pillar</Typography>
             </Reveal>
           </Grid>
@@ -38,7 +38,7 @@ const Section = () => {
           <Grid item xs={12} md={3} textAlign={'center'} order={{ xs: 3, md: 3 }}>
             <Reveal>
               <img src={Leader2} width={'100%'}></img>
-              <Typography variant="h5" color={'#E3C263'}>Juan Dela Cruz</Typography>
+              <Typography variant="h5" color={'#E3C263'}>Marc Hussein P. Bundalian</Typography>
               <Typography variant="h6" color={'#E3C263'}>President & COO, 7th Pillar</Typography>
             </Reveal>
           </Grid>

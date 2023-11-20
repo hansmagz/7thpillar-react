@@ -16,7 +16,7 @@ const Footer = () => {
             </Grid>
             <Grid item>
               <Typography>
-                PSC Bldg 2410 Hen Belarmino St., Brgy Bangkal
+                PSC Bldg 2410 Gen Belarmino St., Brgy Bangkal
               </Typography>
               <Typography>
                 Makati City
