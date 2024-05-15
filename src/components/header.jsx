@@ -101,7 +101,7 @@ const Header = (props) => {
                 }}
             >
                 <Toolbar className='toolBar'>
-                    <Link href="#" underline="none">
+                    <Link href="/" underline="none">
                         {/* <Typography variant="h5" className='logo'>
                                 Logo
                             </Typography> */}

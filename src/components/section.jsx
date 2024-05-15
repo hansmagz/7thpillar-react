@@ -9,6 +9,9 @@ import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import CloudIcon from '@mui/icons-material/Cloud';
 import CloudDoneIcon from '@mui/icons-material/CloudDone';
+import EmojiObjects from '@mui/icons-material/EmojiObjects';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import SecurityIcon from '@mui/icons-material/Security';
 import Reveal from '../components/reveal';
 import BG from '../assets/BG7.png';
 import '../styles/styles.css'
@@ -25,7 +28,7 @@ const Section = () => {
       id: 2,
       icon: <ComputerIcon sx={{ fontSize: 100, color: '#E3C263', transition: 'color 0.3s ease' }} className='sectionGridLogo' />,
       sentence:
-        'Fintech',
+        'Finance & Fintech',
     },
     {
       id: 3,
@@ -35,7 +38,7 @@ const Section = () => {
     {
       id: 4,
       icon: <EqualizerIcon sx={{ fontSize: 100, color: '#E3C263', transition: 'color 0.3s ease' }} className='sectionGridLogo' />,
-      sentence: 'Data & Analytics',
+      sentence: 'Business Intelligence Services',
     },
     {
       id: 5,
@@ -46,6 +49,21 @@ const Section = () => {
       id: 6,
       icon: <CloudDoneIcon sx={{ fontSize: 100, color: '#E3C263', transition: 'color 0.3s ease' }} className='sectionGridLogo' />,
       sentence: 'Cloud Cost Optimization',
+    },
+    {
+      id: 7,
+      icon: <ApartmentIcon sx={{ fontSize: 100, color: '#E3C263', transition: 'color 0.3s ease' }} className='sectionGridLogo' />,
+      sentence: 'Building Design Technology',
+    },
+    {
+      id: 8,
+      icon: <EmojiObjects sx={{ fontSize: 100, color: '#E3C263', transition: 'color 0.3s ease' }} className='sectionGridLogo' />,
+      sentence: 'Generative AI',
+    },
+    {
+      id: 9,
+      icon: <SecurityIcon sx={{ fontSize: 100, color: '#E3C263', transition: 'color 0.3s ease' }} className='sectionGridLogo' />,
+      sentence: 'Cyber Security',
     }
   ];
   return (
@@ -55,9 +73,9 @@ const Section = () => {
         sx={{ backgroundImage: { xs: '', md: `url(${BG})` }, backgroundSize: 'cover', backgroundPosition: 'right', backgroundRepeat: 'no-repeat' }}
       >
         <Grid container style={{ marginTop: '4em', marginBottom: '4em' }}>
-          <Grid container item justifyContent="center">
+          <Grid container item marginInline={{lg:'4.3em', md:'2.5em', sm:'0.7em', xs:'0.7em'}}>
             <Typography variant="h3" fontWeight={700} className='title'>
-              Offered Services
+              Professional Services
             </Typography>
           </Grid>
           <Grid container item>

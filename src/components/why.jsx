@@ -22,10 +22,10 @@ const Section = () => {
         <Reveal>
           <Grid container item pb={8} alignItems={'center'}>
             <Grid item xs={12} md={4}>
-              <Typography variant="h4" fontWeight={700}>Expertise</Typography>
+              <Typography variant="h4" fontWeight={700}>Collaborative Partnership</Typography>
             </Grid>
             <Grid item xs={12} md={8}>
-              <Typography variant="h5">Our team of experienced professionals brings a wealth of knowledge in both hardware and software, ensuring that your technology needs are met with precision.</Typography>
+              <Typography variant="h5">We see ourselves not just as service providers but as partners in your journey. Our collaborative approach ensures that your needs are not only met but exceeded.</Typography>
             </Grid>
           </Grid>
         </Reveal>
@@ -33,10 +33,10 @@ const Section = () => {
         <Reveal>
           <Grid container item pb={8} alignItems={'center'}>
             <Grid item xs={12} md={4}>
-              <Typography variant="h4" fontWeight={700}>End-to-End Solutions</Typography>
+              <Typography variant="h4" fontWeight={700}>Quality Assurance</Typography>
             </Grid>
             <Grid item xs={12} md={8}>
-              <Typography variant="h5">We offer a complete suite of services, from designing and deploying robust hardware systems to developing custom software solutions that enhance efficiency and productivity.</Typography>
+              <Typography variant="h5">We uphold the highest standards of quality in everything we do. Rigorous testing, attention to detail, and a commitment to excellence are ingrained in our company culture.</Typography>
             </Grid>
           </Grid>
         </Reveal>
@@ -58,12 +58,12 @@ const Section = () => {
               <Typography variant="h4" fontWeight={700}>Innovation</Typography>
             </Grid>
             <Grid item xs={12} md={8}>
-              <Typography variant="h5">We stay at the forefront of technology trends and continuously invest in research and development to provide you with the latest and most innovative solutions.</Typography>
+              <Typography variant="h5">We stay at the forefront of technological trends and continuously invest in research and development to provide you with the latest and most innovative solutions.</Typography>
             </Grid>
           </Grid>
         </Reveal>
 
-        <Reveal>
+        {/* <Reveal>
           <Grid container item alignItems={'center'}>
             <Grid item xs={12} md={4}>
               <Typography variant="h4" fontWeight={700}>Quality Assurance</Typography>
@@ -72,7 +72,7 @@ const Section = () => {
               <Typography variant="h5">Our commitment to quality is unwavering. We rigorously test and refine our products and services to meet the highest standards.</Typography>
             </Grid>
           </Grid>
-        </Reveal>
+        </Reveal> */}
       </Grid>
     </>
   );

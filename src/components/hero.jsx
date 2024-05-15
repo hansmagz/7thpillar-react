@@ -18,21 +18,35 @@ const Hero = () => {
             </Grid>
           </Grid>
         </Reveal>
-        <Reveal>
+        {/* <Reveal>
           <Typography variant="h2" fontWeight={700} className='title' mt={5}>
-            Scale up your Business with us
+            Your partner in transformative technology
           </Typography>
         </Reveal>
         <Reveal>
           <Typography variant="h6" className='subtitle'>
-            We help businesses from start to finish. With over 5 years experience in Hardware & Software Solutions.
+          Unleashing evolution and delivering excellence
           </Typography>
+        </Reveal> */}
+        <Reveal>
+          <Grid container item alignItems={'center'}>
+            <Grid item xs={12} md={12}>
+              <Typography variant="h2" fontWeight={700} className='title' mt={5} textAlign={'center'}>
+                Your partner in transformative technology
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={12} textAlign={'center'}>
+              <Typography variant="h6" className='subtitle'>
+                Unleashing evolution and delivering excellence
+              </Typography>
+            </Grid>
+          </Grid>
         </Reveal>
         <Reveal>
           <Button
             variant="outlined"
             color="primary"
-            sx={{ width: '200px', fontSize: '20px' }}
+            sx={{ width: '200px', fontSize: '30px' }}
             href="mailto:info@seventh-pillar.com"
           >
             INQUIRE

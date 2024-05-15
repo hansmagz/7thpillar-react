@@ -18,10 +18,11 @@ const Section = () => {
       >
         <Grid item xs={12} md={9} mb={{ xs: '4em' }}>
           <Reveal>
-            <Typography variant="h2" fontWeight={700} color={'white'}>Ready to Get Started?</Typography>
+            <Typography variant="h2" fontWeight={700} color={'white'}>Connect</Typography>
           </Reveal>
           <Reveal>
-            <Typography variant="h6" color={'#E3C263'}>We’re on your side, doing what it takes to get the job done right from the first consultation to your daily operations.<br />Contact us for a free quote.</Typography>
+            <Typography variant="h6" color={'#E3C263'}>Whether you're looking to enhance your hardware infrastructure, develop customized software, or seek a comprehensive technology partner,<br/>7th Pillar is here for you. Join us in shaping the future of technological solutions.
+</Typography>
           </Reveal>
         </Grid>
         <Grid item xs={12} md={3} textAlign={'center'}>

@@ -10,7 +10,7 @@ const Footer = () => {
     <Box sx={{ flexGrow: 1 }} className='footerContainer'>
       <Container>
         <Grid container mt={1}>
-          <Grid container item spacing={2}>
+          <Grid container item spacing={2} alignItems="center">
             <Grid item>
               <img src={Image} height={'100px'}></img>
             </Grid>
@@ -20,6 +20,9 @@ const Footer = () => {
               </Typography>
               <Typography>
                 Makati City
+              </Typography>
+              <Typography>
+                +02 8334 2616
               </Typography>
               <Typography>
                 info@seventh-pillar.com

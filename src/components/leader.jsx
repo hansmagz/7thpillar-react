@@ -27,19 +27,19 @@ const Section = () => {
             <Reveal>
               <img src={Leader1} width={'100%'}></img>
               <Typography variant="h5" color={'#E3C263'}>Rayner C. Lorenzo</Typography>
-              <Typography variant="h6" color={'#E3C263'}>Chairman, 7th Pillar</Typography>
+              <Typography variant="h6" color={'#E3C263'}>Chairman</Typography>
             </Reveal>
           </Grid>
           <Grid item xs={12} md={5} order={{ xs: 1, md: 2 }}>
             <Reveal>
-              <Typography variant="h6" color={'#E3C263'}>Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti felis lorem et nulla convallis dui faucibus pretium tincidunt. Fames lacinia lacus fusce accumsan cursus. In ornare quam leo vehicula varius. Aliquet vivamus curae montes interdum nunc. At finibus sollicitudin nam elit rutrum. Volutpat ut diam mi gravida eu cursus. Finibus curabitur a faucibus ante leo urna accumsan parturient. Euismod iaculis vestibulum senectus porttitor dapibus aenean nulla aliquet.</Typography>
+              <Typography variant="h6" color={'#E3C263'}>At the heart of 7th Pillar are its visionary founders, individuals who have left an indelible mark on the landscape of technological solutions. Their collective expertise, unwavering dedication, and innovative spirit have been instrumental in shaping the success and character of our company.</Typography>
             </Reveal>
           </Grid>
           <Grid item xs={12} md={3} textAlign={'center'} order={{ xs: 3, md: 3 }}>
             <Reveal>
               <img src={Leader2} width={'100%'}></img>
               <Typography variant="h5" color={'#E3C263'}>Marc Hussein P. Bundalian</Typography>
-              <Typography variant="h6" color={'#E3C263'}>President & COO, 7th Pillar</Typography>
+              <Typography variant="h6" color={'#E3C263'}>President & COO</Typography>
             </Reveal>
           </Grid>
         </Grid>
